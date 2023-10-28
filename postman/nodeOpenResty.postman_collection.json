@@ -1,0 +1,623 @@
+{
+	"info": {
+		"_postman_id": "e07c1156-3d20-41c7-a3a5-2fb40a087af5",
+		"name": "nodeOpernResy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5877241"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"nodeOpernResy\",\n    \"email\": \"moradi@test.com\",\n    \"password\": \"Twu5hKXXKZEQaJ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlServer}}/api/signup",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sign up",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"nodeOpernResy\",\n    \"email\": \"moradi@test.com\",\n    \"password\": \"Twu5hKXXKZEQaJ\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlServer}}/api/signup",
+									"host": [
+										"{{urlServer}}"
+									],
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:8081"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "x-access-token, Origin, Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-RSWLzta9RAquoHRNRt/jwk0o5Bw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Oct 2023 13:10:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Failed! Username is already in use!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"nodeOpernResy\",\n    \"password\": \"Twu5hKXXKZEQaJ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlServer}}/api/signin",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"api",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signIn",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"nodeOpernResy\",\n    \"password\": \"Twu5hKXXKZEQaJ\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlServer}}/api/signin",
+									"host": [
+										"{{urlServer}}"
+									],
+									"path": [
+										"api",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:8081"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "x-access-token, Origin, Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d2-7xw+efTezpI3/XFLLORkLADDDwM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 02 Oct 2023 13:10:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"username\": \"nodeOpernResy\",\n    \"email\": \"moradi@test.com\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk2MjUyMjA0LCJleHAiOjE2OTYzMzg2MDR9.ogor2KJkSyeoRq43FX1KJRsjYc8I-M_i6ltDI3AKLwQ\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "parseToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhcnNwYWNrIiwiaWQiOjEsImlhdCI6MTY5NjI3OTkwMCwiZXhwIjoxNjk2MzY2MzAwfQ.os00uKf-6ZDH3c1LxJGdEqM0W8nxc-nGESGyeGh8NEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/api/user",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "files",
+			"item": [
+				{
+					"name": "upload file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhcnNwYWNrIiwiaWQiOjEsImlhdCI6MTY5NjI3OTkwMCwiZXhwIjoxNjk2MzY2MzAwfQ.os00uKf-6ZDH3c1LxJGdEqM0W8nxc-nGESGyeGh8NEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/mohammad/Desktop/moradi.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlServer}}/api/upload",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"api",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "convert to webp",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhcnNwYWNrIiwiaWQiOjEsImlhdCI6MTY5NjI3OTkwMCwiZXhwIjoxNjk2MzY2MzAwfQ.os00uKf-6ZDH3c1LxJGdEqM0W8nxc-nGESGyeGh8NEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/mohammad/Desktop/moradi.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urlServer}}/api/image/webp",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"api",
+								"image",
+								"webp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get files",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhcnNwYWNrIiwiaWQiOjEsImlhdCI6MTY5NjI3OTkwMCwiZXhwIjoxNjk2MzY2MzAwfQ.os00uKf-6ZDH3c1LxJGdEqM0W8nxc-nGESGyeGh8NEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/api/files",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"api",
+								"files"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get files",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urlServer}}/api/files",
+									"host": [
+										"{{urlServer}}"
+									],
+									"path": [
+										"api",
+										"files"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:8081"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "x-access-token, Origin, Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "916"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"394-vwe/WviJKLGOxB8X12oue9yZrUE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Oct 2023 13:36:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"1696321197968-moradi.jpeg\",\n        \"url\": \"http://localhost:8080/files/nodeOpernResy/1696321197968-moradi.jpeg\",\n        \"size\": \"39434 bytes\",\n        \"createdAt\": \"2023-10-03T08:19:57.966Z\",\n        \"type\": \"jpeg\",\n        \"minifyMemoryMeasurment\": \"not measured yet!\",\n        \"minifyTimeSpent\": \"not measured yet!\",\n        \"minify\": \"http://localhost:8080/minify/nodeOpernResy/1696321197968-moradi.jpeg\"\n    },\n    {\n        \"name\": \"middleware.js\",\n        \"url\": \"http://localhost:8080/files/nodeOpernResy/middleware.js\",\n        \"size\": \"111 bytes\",\n        \"createdAt\": \"2023-10-03T09:21:52.113Z\",\n        \"type\": \"js\",\n        \"minifyMemoryMeasurment\": \"856.3 KB\",\n        \"minifyTimeSpent\": \"14.225827001035213 ms\",\n        \"minify\": \"http://localhost:8080/minify/nodeOpernResy/middleware.js\"\n    },\n    {\n        \"name\": \"test.css\",\n        \"url\": \"http://localhost:8080/files/nodeOpernResy/test.css\",\n        \"size\": \"84 bytes\",\n        \"createdAt\": \"2023-10-03T11:49:18.651Z\",\n        \"type\": \"css\",\n        \"minifyMemoryMeasurment\": \"469.84 KB\",\n        \"minifyTimeSpent\": \"7.368347000330687 ms\",\n        \"minify\": \"http://localhost:8080/minify/nodeOpernResy/test.css\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "minify",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBhcnNwYWNrIiwiaWQiOjEsImlhdCI6MTY5NjI3OTkwMCwiZXhwIjoxNjk2MzY2MzAwfQ.os00uKf-6ZDH3c1LxJGdEqM0W8nxc-nGESGyeGh8NEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urlServer}}/minify/nodeOpernResy/test.css",
+							"host": [
+								"{{urlServer}}"
+							],
+							"path": [
+								"minify",
+								"nodeOpernResy",
+								"test.css"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "minify css",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urlServer}}/minify/nodeOpernResy/test.css",
+									"host": [
+										"{{urlServer}}"
+									],
+									"path": [
+										"minify",
+										"nodeOpernResy",
+										"test.css"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "raw",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:8081"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "x-access-token, Origin, Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/css; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-uidU2oX2uN07gnmGLN2fDXEukgA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Oct 2023 12:51:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "body{background-color:#add8e6}h1{color:navy;margin-left:20px}"
+						},
+						{
+							"name": "minify js",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urlServer}}/minify/nodeOpernResy/middleware.js",
+									"host": [
+										"{{urlServer}}"
+									],
+									"path": [
+										"minify",
+										"nodeOpernResy",
+										"middleware.js"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "script",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:8081"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "x-access-token, Origin, Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/javascript; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"57-XtULTB1wM7q3Nppk2o+zAwvHy/g\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 Oct 2023 13:25:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "export default function({$cookies:e,redirect:o}){if(!e.get(\"boom_token\"))return o(\"/\")}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlServer}}/healthcheck",
+					"host": [
+						"{{urlServer}}"
+					],
+					"path": [
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
